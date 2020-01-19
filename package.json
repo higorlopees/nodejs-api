@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-api",
+  "version": "1.0.0",
+  "description": "Nodejs api created in a Rocketseat nodejs course",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "watch": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/higorlopees/nodejs-api.git"
+  },
+  "author": "Higor Lopes da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/higorlopees/nodejs-api/issues"
+  },
+  "homepage": "https://github.com/higorlopees/nodejs-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.9",
+    "mongoose-paginate": "^5.0.3",
+    "require-dir": "^1.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
