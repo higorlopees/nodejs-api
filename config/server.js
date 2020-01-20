@@ -10,9 +10,8 @@ app.use(express.json());
 app.use(cors());
 
 // Inicializing the database
-const username = process.env.MONGODB_USERNAME;
-const password = process.env.MONGODB_PASSWORD;
-mongoose.connect(`mongodb+srv://${username}:${password}@cluster0-0xayi.gcp.mongodb.net/test?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true });
+const uri = process.env.MONGOLAB_URI;
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 requireDir('../src/models');
 
 // Routes
