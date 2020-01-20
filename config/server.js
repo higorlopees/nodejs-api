@@ -9,7 +9,9 @@ app.use(express.json());
 app.use(cors());
 
 // Inicializing the database
-mongoose.connect("mongodb+srv://production:KikSkHWd9rq3V9ff@cluster0-0xayi.gcp.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+const username = process.env.MONGODB_USERNAME;
+const password = process.env.MONGODB_PASSWORD;
+mongoose.connect(`mongodb+srv://${username}:${password}@cluster0-0xayi.gcp.mongodb.net/test?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true });
 requireDir('../src/models');
 
 // Routes
