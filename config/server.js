@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 // Inicializing the database
-mongoose.connect('mongodb://localhost:27017/nodeapi', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://production:KikSkHWd9rq3V9ff@cluster0-0xayi.gcp.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 requireDir('../src/models');
 
 // Routes
