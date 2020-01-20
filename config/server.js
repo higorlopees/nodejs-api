@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 // Inicializing the database
-const uri = process.env.MONGOLAB_URI;
+const uri = process.env.PROD_MONGODB;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 requireDir('../src/models');
 
